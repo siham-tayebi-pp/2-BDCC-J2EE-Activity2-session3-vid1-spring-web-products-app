@@ -29,10 +29,13 @@ public class ProductRestAPI {
     }
     @GetMapping("/product/{id}")
     public Product getProduct(@PathVariable(name = "id") Long id) {
+
         return productRepository.findById(id).get();
     }
     @DeleteMapping("/product/{id}")
     public void delete(@PathVariable(name = "id") Long id) {
-         productRepository.deleteById(id);
+
+        productRepository.deleteById(id);
     }
 }
+
